@@ -6,12 +6,14 @@ export const uiSlice = createSlice({
     name: 'ui',
     initialState,
     reducers: {
-       //yadayada
+       toggleContactDetails: (state) => {
+            state = false;
+        },
 
     },
 });
 
-export const {  } = uiSlice.actions;
+export const { toggleContactDetails } = uiSlice.actions;
 
 
 
