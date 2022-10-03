@@ -1,6 +1,6 @@
 const UserForm: React.FC = ()=>{
     return(
-        <section>
+        <section className="mx-auto max-w-4xl">
             <div>
                 <form id="form" className="p-5">
                     <div>
@@ -16,11 +16,9 @@ const UserForm: React.FC = ()=>{
                             </div>
                             <div id="form-field-container" className="flex flex-col">
                                 <input placeholder="Last name" id="first-name" type="text" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
-                        </div>
-                        <div id="controllers-group" className="flex flex-wrap gap-3">
-                            <div id="form-field-container" className="flex flex-col">
-                                <input placeholder="Date of Birth" id="Date-of-birth" type="date" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
                             </div>
+                        </div>
+                        <div id="controllers-group" className="flex flex-wrap gap-3 pt-3">
                             <div id="form-field-container" className="flex flex-col">
                                 <select placeholder="gender" id="gender" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md">
                                     <option value="">Gender</option>
@@ -54,8 +52,12 @@ const UserForm: React.FC = ()=>{
                                 </select>
                             </div>
                         </div>
-                    </div>
-                        
+                        <div id="controllers-group" className="flex flex-wrap gap-3 pt-3">
+                            <div id="form-field-container" className="flex flex-col">
+                                <label htmlFor="date-of-birth">Date of birth:</label>
+                                <input id="Date-of-birth" type="date" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
+                            </div>
+                        </div>
                     </div>
                     <div id="contact-details-controllers" className="pt-2">
                         <div>
@@ -125,6 +127,53 @@ const UserForm: React.FC = ()=>{
                             </div>
                         </div>
                     </div>
+                    <div id="experience-controllers" className="pt-2">
+                    <div>
+                            <h3 className="font-semibold">Experience</h3>
+                        </div>
+                        <div id="controllers-group" className="flex flex-wrap gap-3">
+                            <div id="form-field-container" className="flex flex-col">
+                                <input placeholder="Employer Name" id="institution-name" type="text" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
+                            </div>
+                            <div id="form-field-container" className="flex flex-col">
+                                <input placeholder="Position" id="position" type="text" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
+                            </div>
+                            <div id="form-field-container" className="flex items-center space-x-2">
+                                <label htmlFor="">Current employer?</label>
+                                <input type="checkbox" name="current" id="current-controller" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
+                            </div>
+                        </div>
+                        <div id="controllers-group" className="flex flex-wrap gap-3 pt-3">
+                            <div id="form-field-container" className="flex flex-col">
+                                <label htmlFor="start-date">Start Date:</label>
+                                <input placeholder="Start Date" id="start-date" type="date" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
+                            </div>
+                            <div id="form-field-container" className="flex flex-col">
+                                <label htmlFor="end-date">End Date:</label>
+                                <input placeholder="End Date" id="end-date" type="date" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile-controllers" className="pt-2">
+                        <div>
+                            <h3 className="font-semibold">Profile</h3>
+                        </div>
+                        <div id="controllers-group" className="flex flex-wrap gap-3">
+                            <div id="form-field-container" className="flex flex-col">
+                                <textarea name="profile" id="profile" cols={30} rows={10} className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md"></textarea>
+                            </div>
+                            <div id="form-field-container" className="flex flex-col">
+                                <select placeholder="gender" id="gender" className="focus:ring-1 focus:ring-blue-300 focus:border-0 ring-1 ring-blue-300 border-0 placeholder:text-gray-400 rounded-md">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
                 
                 </form>
             </div>
