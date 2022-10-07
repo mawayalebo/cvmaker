@@ -1,19 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {}
+const initialState = {
+    currentEmployer: false
+}
 
 export const uiSlice = createSlice({
     name: 'ui',
     initialState,
     reducers: {
-       toggleContactDetails: (state) => {
-            state = false;
+       toggleCurrent: (state) => {
+            state.currentEmployer = !state.currentEmployer;
         },
 
     },
 });
 
-export const { toggleContactDetails } = uiSlice.actions;
+export const { toggleCurrent } = uiSlice.actions;
 
 
 
