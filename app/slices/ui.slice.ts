@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    currentEmployer: false
+    currentEmployer: true
 }
 
 export const uiSlice = createSlice({
@@ -17,6 +17,8 @@ export const uiSlice = createSlice({
 
 export const { toggleCurrent } = uiSlice.actions;
 
-
+export const selectCurrent = (state: any) => {
+    return state
+}
 
 export default uiSlice.reducer;

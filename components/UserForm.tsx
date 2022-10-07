@@ -2,6 +2,7 @@ import Address from "./Address";
 import ContactDetails from "./ContactDetails";
 import Education from "./Education";
 import Experience from "./Experience";
+import ExperienceList from "./ExperienceList";
 import PersonalDetails from "./PersonalDetails";
 import Profile from "./Profile";
 import Skills from "./Skills";
@@ -19,8 +20,9 @@ const UserForm: React.FC = ()=>{
                     <Address/>
                     <Education/>
                     <Skills/>
-                    <Experience/>
-                    <Profile/>
+                    <Experience/> 
+                    <ExperienceList/>
+                    <Profile/> 
                 </form>
             </div>
         </section>

@@ -1,4 +1,18 @@
+
+
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+
+
 const Experience: React.FC = () => {
+  const dispatch = useDispatch();
+
+  const [isCurrent, setIsCurrent] = useState<Boolean>(true)
+
+  const handleClick = ()=>{
+    setIsCurrent(!isCurrent)
+  }
+
   return (
     <section>
       <div id="experience-controllers" className="pt-2">
@@ -27,7 +41,7 @@ const Experience: React.FC = () => {
             className="flex items-center space-x-2"
           >
             <label htmlFor="">Current employer?</label>
-            <input
+            <input onClick={handleClick}
               type="checkbox"
               name="current"
               id="current-controller"
@@ -35,7 +49,9 @@ const Experience: React.FC = () => {
             />
           </div>
         </div>
-        <div id="controllers-group" className="flex flex-wrap gap-3 pt-3">
+        {
+          isCurrent &&
+          <div id="controllers-group" className="flex flex-wrap gap-3 pt-3">
           <div id="form-field-container" className="flex flex-col">
             <label htmlFor="start-date">Start Date:</label>
             <input
@@ -55,6 +71,9 @@ const Experience: React.FC = () => {
             />
           </div>
         </div>
+
+        }
+        
         <div id="controllers-group" className="flex flex-wrap gap-3 pt-3">
           <div id="form-field-container" className="flex flex-col">
             <button 
