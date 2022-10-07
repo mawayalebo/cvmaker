@@ -55,6 +55,15 @@ const Experience: React.FC = () => {
             />
           </div>
         </div>
+        <div id="controllers-group" className="flex flex-wrap gap-3 pt-3">
+          <div id="form-field-container" className="flex flex-col">
+            <button 
+              className="bg-blue-400 rounded-md px-4 font-semibold text-white py-2 hover:bg-white hover:ring ring-blue-400 hover:text-blue-400 hover:transition duration-300 delay-100 ease-in-out"
+            >
+              Add Experience
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
