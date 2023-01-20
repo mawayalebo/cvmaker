@@ -1,4 +1,14 @@
+import { useState, useRef } from "react";
+
+
 const Profile: React.FC = () => {
+  const [profile, setProfile] = useState<null | string>();
+  const profileOption = useRef();
+
+  
+  const handleClick: ()=>void = ()=>{
+
+  }
   return (
     <section>
       <div id="profile-controllers" className="pt-2">
